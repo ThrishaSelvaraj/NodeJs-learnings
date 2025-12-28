@@ -33,13 +33,11 @@ const removeTask=(index)=>{
     console.log("invalid index");
     return; }
     else{
-        tasks.splice(index-1,1);
-    
+    tasks.splice(index-1,1);
     const newText = JSON.stringify(tasks);
     fs.writeFileSync(filepath,newText);
     console.log("deleted the given index")
-    }
-    
+    }   
 }
 const command = process.argv[2];
 const argument = process.argv[3];
